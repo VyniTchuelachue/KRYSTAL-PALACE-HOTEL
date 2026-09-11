@@ -60,11 +60,11 @@ export default function Navigation() {
             : 'bg-gradient-to-b from-ink-950/60 to-transparent'
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:h-20 sm:gap-0 sm:px-6 lg:px-10">
+        <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 sm:h-20 sm:gap-0 sm:px-6 lg:px-10">
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex shrink-0 items-center gap-3 text-ivory-50/90 transition-colors hover:text-gold-300"
+            className="flex shrink-0 items-center justify-self-start gap-3 text-ivory-50/90 transition-colors hover:text-gold-300"
             aria-expanded={open}
             aria-label="Ouvrir le menu"
           >
@@ -74,11 +74,11 @@ export default function Navigation() {
             </span>
           </button>
 
-          <Link to="/" className="flex min-w-0 shrink items-center" onClick={() => setOpen(false)}>
-            <img src="/img/logo.png" alt={hotel.name} className="h-7 w-auto sm:h-9 lg:h-11" />
+          <Link to="/" className="flex min-w-0 shrink items-center justify-self-center" onClick={() => setOpen(false)}>
+            <img src="/img/logo.png" alt={hotel.name} className="h-8 w-auto sm:h-10 lg:h-12" />
           </Link>
 
-          <div className="flex shrink-0 items-center gap-3 sm:gap-6">
+          <div className="flex shrink-0 items-center justify-self-end gap-3 sm:gap-6">
             <a
               href={`tel:${hotel.phones[0].replace(/\s/g, '')}`}
               className="hidden items-center gap-2 text-sm text-ivory-50/80 transition-colors hover:text-gold-300 md:inline-flex"
