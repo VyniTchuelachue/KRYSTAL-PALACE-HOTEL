@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { hotel, navSections, simpleLinks } from '../data/content.js'
+import { IconPhone } from './icons.jsx'
 
 function MenuIcon({ open }) {
   return (
@@ -80,8 +81,9 @@ export default function Navigation() {
           <div className="flex shrink-0 items-center gap-3 sm:gap-6">
             <a
               href={`tel:${hotel.phones[0].replace(/\s/g, '')}`}
-              className="hidden text-sm text-ivory-50/80 transition-colors hover:text-gold-300 md:inline"
+              className="hidden items-center gap-2 text-sm text-ivory-50/80 transition-colors hover:text-gold-300 md:inline-flex"
             >
+              <IconPhone className="h-4 w-4" />
               {hotel.phones[0]}
             </a>
             <Link

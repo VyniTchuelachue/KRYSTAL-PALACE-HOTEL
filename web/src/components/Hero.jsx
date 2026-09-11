@@ -1,27 +1,68 @@
+import { Link } from 'react-router-dom'
 import { hotel } from '../data/content.js'
 import BookingBar from './BookingBar.jsx'
+import { IconArrow, IconCard, IconRefresh, IconTag } from './icons.jsx'
+
+const trustItems = [
+  { icon: IconTag, label: 'Meilleur tarif garanti' },
+  { icon: IconRefresh, label: 'Annulation flexible' },
+  { icon: IconCard, label: "Paiement à l'hôtel" },
+]
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-ink-950 pb-32 pt-32 sm:pb-36">
+    <section className="relative flex min-h-screen flex-col overflow-hidden bg-ink-950 pt-24 sm:pt-28">
       <img
         src="/img/hero-background.jpg"
-        alt="Hall d'accueil du Krystal Palace Douala"
+        alt="Lobby du Krystal Palace Douala"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/10" />
-      <div className="absolute inset-0 bg-ink-950/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-ink-950/30" />
+      <div className="absolute inset-0 bg-ink-950/15" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
-        <h1
-          className="animate-fade-up max-w-4xl font-display text-4xl leading-[1.1] text-ivory-50 sm:text-6xl lg:text-7xl"
-        >
-          {hotel.tagline}
-        </h1>
+      <div className="relative z-10 flex flex-1 flex-col justify-center px-4 py-10 sm:px-6 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl">
+          <p className="animate-fade-up text-xs uppercase tracking-[0.4em] text-gold-300 sm:text-sm">
+            Luxe &bull; Confort &bull; Excellence
+          </p>
+          <h1
+            className="animate-fade-up mt-5 max-w-4xl font-display text-4xl leading-[1.1] text-ivory-50 sm:text-6xl lg:text-7xl"
+            style={{ animationDelay: '0.1s' }}
+          >
+            {hotel.tagline}
+          </h1>
+          <p
+            className="animate-fade-up mt-5 max-w-lg text-base leading-relaxed text-ivory-100/85 sm:text-lg"
+            style={{ animationDelay: '0.2s' }}
+          >
+            Vivez une expérience hôtelière 5 étoiles au cœur de Douala.
+          </p>
+          <Link
+            to="/notre-hotel"
+            className="animate-fade-up mt-8 inline-flex items-center gap-3 border border-gold-300/70 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-gold-300 transition-colors hover:bg-gold-300 hover:text-ink-950 sm:text-sm"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Découvrir l&apos;expérience <IconArrow />
+          </Link>
+        </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-20 px-4 pb-3 sm:px-6 sm:pb-4 lg:px-10">
-        <BookingBar />
+      <div className="relative z-10 px-4 pb-6 sm:px-6 sm:pb-8 lg:px-10">
+        <div className="mx-auto w-full max-w-6xl">
+          <BookingBar />
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[11px] uppercase tracking-[0.15em] text-ivory-100/70 sm:gap-x-10 sm:text-xs">
+            {trustItems.map(({ icon: Icon, label }, i) => (
+              <span key={label} className="flex items-center gap-4">
+                {i > 0 && <span className="hidden h-4 w-px bg-ivory-100/25 sm:block" />}
+                <span className="flex items-center gap-2">
+                  <Icon className="h-4 w-4 text-gold-300" />
+                  {label}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

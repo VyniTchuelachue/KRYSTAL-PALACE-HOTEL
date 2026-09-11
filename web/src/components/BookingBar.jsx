@@ -1,8 +1,15 @@
 import { useNavigate } from 'react-router-dom'
+import { IconCalendar, IconChevronDown, IconUser } from './icons.jsx'
 
 function toISODate(date) {
   return date.toISOString().split('T')[0]
 }
+
+const fieldClass =
+  'flex min-w-0 flex-1 items-center gap-3 px-4 py-4 sm:px-6 sm:py-5'
+const labelClass = 'text-[10px] uppercase tracking-[0.15em] text-ivory-100/55 sm:text-[11px] sm:tracking-[0.2em]'
+const valueClass =
+  'w-full min-w-0 appearance-none bg-transparent text-sm text-ivory-50 outline-none [&::-webkit-calendar-picker-indicator]:opacity-0'
 
 export default function BookingBar() {
   const navigate = useNavigate()
@@ -12,47 +19,64 @@ export default function BookingBar() {
 
   return (
     <form
-      className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-px overflow-hidden border border-ivory-200 bg-ivory-200 shadow-xl md:grid-cols-4"
+      className="mx-auto flex w-full max-w-6xl flex-col divide-y divide-ivory-100/15 border border-ivory-100/20 bg-ink-950/55 shadow-2xl backdrop-blur-md sm:flex-row sm:divide-x sm:divide-y-0"
       onSubmit={(e) => {
         e.preventDefault()
         navigate('/contact')
       }}
     >
-      <label className="flex min-w-0 flex-col gap-1 bg-ivory-50 px-3 py-3 sm:px-5 sm:py-4">
-        <span className="text-[10px] uppercase tracking-[0.15em] text-charcoal-dim sm:text-[11px] sm:tracking-[0.2em]">
-          Arrivée
+      <label className={fieldClass}>
+        <IconCalendar className="h-5 w-5 shrink-0 text-gold-300" />
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className={labelClass}>Arrivée</span>
+          <span className="flex items-center gap-2">
+            <input
+              type="date"
+              defaultValue={toISODate(today)}
+              style={{ colorScheme: 'dark' }}
+              className={valueClass}
+            />
+            <IconChevronDown className="h-4 w-4 shrink-0 text-ivory-100/50" />
+          </span>
         </span>
-        <input
-          type="date"
-          defaultValue={toISODate(today)}
-          className="w-full min-w-0 bg-transparent text-xs text-charcoal outline-none sm:text-sm"
-        />
       </label>
-      <label className="flex min-w-0 flex-col gap-1 bg-ivory-50 px-3 py-3 sm:px-5 sm:py-4">
-        <span className="text-[10px] uppercase tracking-[0.15em] text-charcoal-dim sm:text-[11px] sm:tracking-[0.2em]">
-          Départ
+
+      <label className={fieldClass}>
+        <IconCalendar className="h-5 w-5 shrink-0 text-gold-300" />
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className={labelClass}>Départ</span>
+          <span className="flex items-center gap-2">
+            <input
+              type="date"
+              defaultValue={toISODate(tomorrow)}
+              style={{ colorScheme: 'dark' }}
+              className={valueClass}
+            />
+            <IconChevronDown className="h-4 w-4 shrink-0 text-ivory-100/50" />
+          </span>
         </span>
-        <input
-          type="date"
-          defaultValue={toISODate(tomorrow)}
-          className="w-full min-w-0 bg-transparent text-xs text-charcoal outline-none sm:text-sm"
-        />
       </label>
-      <label className="flex min-w-0 flex-col gap-1 bg-ivory-50 px-3 py-3 sm:px-5 sm:py-4">
-        <span className="text-[10px] uppercase tracking-[0.15em] text-charcoal-dim sm:text-[11px] sm:tracking-[0.2em]">
-          Voyageurs
+
+      <label className={fieldClass}>
+        <IconUser className="h-5 w-5 shrink-0 text-gold-300" />
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className={labelClass}>Voyageurs</span>
+          <span className="flex items-center gap-2">
+            <select defaultValue="2" style={{ colorScheme: 'dark' }} className={valueClass}>
+              <option value="1">1 Chambre, 1 Adulte</option>
+              <option value="2">1 Chambre, 2 Adultes</option>
+              <option value="3">2 Chambres, 4 Adultes</option>
+            </select>
+            <IconChevronDown className="h-4 w-4 shrink-0 text-ivory-100/50" />
+          </span>
         </span>
-        <select defaultValue="2" className="w-full min-w-0 bg-transparent text-xs text-charcoal outline-none sm:text-sm">
-          <option value="1">1 Chambre, 1 Adulte</option>
-          <option value="2">1 Chambre, 2 Adultes</option>
-          <option value="3">2 Chambres, 4 Adultes</option>
-        </select>
       </label>
+
       <button
         type="submit"
-        className="flex items-center justify-center gap-2 bg-gold-500 px-3 py-3 text-[11px] uppercase tracking-[0.15em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-5 sm:py-4 sm:text-sm sm:tracking-[0.2em]"
+        className="flex items-center justify-center gap-2 bg-gold-500 px-6 py-4 text-xs uppercase tracking-[0.15em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-8 sm:py-5 sm:text-sm sm:tracking-[0.2em]"
       >
-        Réserver
+        Vérifier les disponibilités
       </button>
     </form>
   )
