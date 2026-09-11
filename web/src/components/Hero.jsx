@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
 import { hotel } from '../data/content.js'
+import BookingBar from './BookingBar.jsx'
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-end overflow-hidden bg-ink-950">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-ink-950 pb-32 pt-32 sm:pb-36">
       <img
         src="/img/hero-background.jpg"
         alt="Hall d'accueil du Krystal Palace Douala"
@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/10" />
       <div className="absolute inset-0 bg-ink-950/20" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-28 pt-40 sm:px-6 lg:px-10 lg:pb-36">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
         <p className="animate-fade-up text-xs uppercase tracking-[0.4em] text-gold-300 sm:text-sm">
           {hotel.name} &middot; {hotel.category}
         </p>
@@ -29,23 +29,10 @@ export default function Hero() {
           Au cœur du quartier des affaires d&apos;Akwa, vivez une expérience unique dans un cadre serein et
           luxueux, avec vue sur le fleuve Wouri &mdash; à 20 minutes de l&apos;aéroport international de Douala.
         </p>
-        <div
-          className="animate-fade-up mt-9 flex flex-wrap items-center gap-4"
-          style={{ animationDelay: '0.3s' }}
-        >
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center bg-gold-500 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-ink-950 transition-colors hover:bg-gold-400 sm:text-sm"
-          >
-            Réserver un séjour
-          </Link>
-          <Link
-            to="/notre-hotel"
-            className="inline-flex items-center justify-center border border-ivory-100/40 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-ivory-50 transition-colors hover:border-gold-300 hover:text-gold-300 sm:text-sm"
-          >
-            Découvrir l&apos;hôtel
-          </Link>
-        </div>
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 z-20 px-4 pb-6 sm:px-6 sm:pb-8 lg:px-10">
+        <BookingBar />
       </div>
     </section>
   )
