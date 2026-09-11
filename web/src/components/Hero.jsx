@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
           <h1
             aria-label={hotel.tagline}
-            className="animate-fade-up mt-5 max-w-3xl font-display text-[2.1rem] leading-[1.1] text-ivory-50 sm:text-7xl lg:text-8xl"
+            className="animate-fade-up mt-5 max-w-3xl font-display text-[2.1rem] font-bold leading-[1.1] text-ivory-50 sm:text-7xl lg:text-8xl"
             style={{ animationDelay: '0.1s' }}
           >
             <span aria-hidden="true">
