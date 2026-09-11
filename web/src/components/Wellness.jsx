@@ -20,7 +20,7 @@ const spaces = [
 
 export default function Wellness() {
   return (
-    <section id="bien-etre" className="bg-ivory-50 py-24 sm:py-32">
+    <section className="bg-ivory-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading
           eyebrow="Bien-être"

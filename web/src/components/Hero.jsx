@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom'
 import { hotel } from '../data/content.js'
 
 export default function Hero() {
   return (
-    <section id="accueil" className="relative flex min-h-screen items-end overflow-hidden bg-ink-950">
+    <section className="relative flex min-h-screen items-end overflow-hidden bg-ink-950">
       <img
-        src="/img/hero-pool.jpg"
-        alt="Piscine et façade du Krystal Palace Douala au crépuscule"
+        src="/img/hero-background.jpg"
+        alt="Hall d'accueil du Krystal Palace Douala"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/10" />
@@ -32,18 +33,18 @@ export default function Hero() {
           className="animate-fade-up mt-9 flex flex-wrap items-center gap-4"
           style={{ animationDelay: '0.3s' }}
         >
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center bg-gold-500 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-ink-950 transition-colors hover:bg-gold-400 sm:text-sm"
           >
             Réserver un séjour
-          </a>
-          <a
-            href="#hotel"
+          </Link>
+          <Link
+            to="/notre-hotel"
             className="inline-flex items-center justify-center border border-ivory-100/40 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-ivory-50 transition-colors hover:border-gold-300 hover:text-gold-300 sm:text-sm"
           >
             Découvrir l&apos;hôtel
-          </a>
+          </Link>
         </div>
       </div>
     </section>

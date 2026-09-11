@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
+
 function toISODate(date) {
   return date.toISOString().split('T')[0]
 }
 
 export default function BookingBar() {
+  const navigate = useNavigate()
   const today = new Date()
   const tomorrow = new Date(today)
   tomorrow.setDate(today.getDate() + 1)
@@ -13,7 +16,7 @@ export default function BookingBar() {
         className="mx-auto grid max-w-6xl grid-cols-2 gap-px overflow-hidden border border-ivory-200 bg-ivory-200 shadow-xl md:grid-cols-4"
         onSubmit={(e) => {
           e.preventDefault()
-          document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+          navigate('/contact')
         }}
       >
         <label className="flex flex-col gap-1 bg-ivory-50 px-5 py-4">

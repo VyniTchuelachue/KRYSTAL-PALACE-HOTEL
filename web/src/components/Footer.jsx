@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { hotel, navSections } from '../data/content.js'
 
 export default function Footer() {
@@ -16,9 +17,9 @@ export default function Footer() {
             <ul className="mt-4 flex flex-col gap-2 text-sm">
               {navSections.map((section) => (
                 <li key={section.id}>
-                  <a href={section.anchor} className="hover:text-gold-300">
+                  <Link to={section.to} className="hover:text-gold-300">
                     {section.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

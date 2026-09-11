@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import { sectionPreviews } from '../data/content.js'
 
 export default function SectionPreviewGrid() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       {sectionPreviews.map((item) => (
-        <a key={item.id} href={item.anchor} className="group relative aspect-[4/5] overflow-hidden bg-ink-950">
+        <Link key={item.id} to={item.to} className="group relative aspect-[4/5] overflow-hidden bg-ink-950">
           <img
             src={item.image}
             alt={item.label}
@@ -18,7 +19,7 @@ export default function SectionPreviewGrid() {
               Découvrir <span aria-hidden>&rarr;</span>
             </span>
           </div>
-        </a>
+        </Link>
       ))}
     </section>
   )

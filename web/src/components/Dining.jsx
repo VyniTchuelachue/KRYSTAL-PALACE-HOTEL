@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
 import SectionHeading from './ui/SectionHeading.jsx'
 
 export default function Dining() {
   return (
-    <section id="restauration" className="bg-ink-950 py-24 text-ivory-50 sm:py-32">
+    <section className="bg-ink-950 py-24 text-ivory-50 sm:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <div>
           <img
@@ -36,12 +37,12 @@ export default function Dining() {
               Dîners de prestige et réceptions gastronomiques sur demande.
             </li>
           </ul>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="mt-9 inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-300 hover:text-gold-200"
           >
             Réserver une table <span aria-hidden>&rarr;</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

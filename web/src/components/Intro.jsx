@@ -10,7 +10,7 @@ const stats = [
 
 export default function Intro() {
   return (
-    <section id="hotel" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
+    <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="order-2 lg:order-1">
           <SectionHeading

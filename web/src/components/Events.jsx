@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SectionHeading from './ui/SectionHeading.jsx'
 
 const events = [
@@ -20,7 +21,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="evenements" className="relative overflow-hidden bg-ink-950 py-24 text-ivory-50 sm:py-32">
+    <section className="relative overflow-hidden bg-ink-950 py-24 text-ivory-50 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading
           eyebrow="Événements"
@@ -44,12 +45,12 @@ export default function Events() {
             </div>
           ))}
         </div>
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="mt-10 inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-300 hover:text-gold-200"
         >
           Demander un devis événementiel <span aria-hidden>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   )

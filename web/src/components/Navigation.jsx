@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { hotel, navSections, simpleLinks } from '../data/content.js'
 
 function MenuIcon({ open }) {
@@ -72,9 +73,9 @@ export default function Navigation() {
             </span>
           </button>
 
-          <a href="#accueil" className="flex items-center" onClick={() => setOpen(false)}>
+          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
             <img src="/img/logo.png" alt={hotel.name} className="h-9 w-auto sm:h-11" />
-          </a>
+          </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
             <a
@@ -83,12 +84,12 @@ export default function Navigation() {
             >
               {hotel.phones[0]}
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center border border-gold-400/80 bg-gold-500 px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-7"
             >
               Réserver
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -100,9 +101,9 @@ export default function Navigation() {
         aria-hidden={!open}
       >
         <div className="flex h-20 items-center justify-between border-b border-ivory-100/10 px-4 sm:px-6 lg:px-10">
-          <a href="#accueil" className="flex items-center" onClick={() => setOpen(false)}>
+          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
             <img src="/img/logo.png" alt={hotel.name} className="h-9 w-auto sm:h-11" />
-          </a>
+          </Link>
           <button
             type="button"
             onClick={() => setOpen(false)}
@@ -134,9 +135,9 @@ export default function Navigation() {
                   {activeId === section.id && (
                     <div className="grid grid-cols-2 gap-3 pb-5 md:hidden">
                       {section.items.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.anchor}
+                          to={item.to}
                           onClick={() => setOpen(false)}
                           className="group overflow-hidden rounded-sm bg-ink-800"
                         >
@@ -146,7 +147,7 @@ export default function Navigation() {
                             className="h-20 w-full object-cover opacity-90 transition-opacity group-hover:opacity-100"
                           />
                           <span className="block px-2 py-2 text-xs text-ivory-100">{item.name}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -156,14 +157,14 @@ export default function Navigation() {
 
             <ul className="mt-8 flex flex-col gap-1">
               {simpleLinks.map((link) => (
-                <li key={link.anchor}>
-                  <a
-                    href={link.anchor}
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-sm uppercase tracking-[0.2em] text-ivory-50/70 transition-colors hover:text-gold-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -184,12 +185,7 @@ export default function Navigation() {
             </p>
             <div className="grid grid-cols-3 gap-x-6 gap-y-10">
               {activeSection.items.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.anchor}
-                  onClick={() => setOpen(false)}
-                  className="group flex flex-col gap-3"
-                >
+                <Link key={item.name} to={item.to} onClick={() => setOpen(false)} className="group flex flex-col gap-3">
                   <div className="aspect-[4/3] overflow-hidden bg-ink-800">
                     <img
                       src={item.image}
@@ -200,18 +196,18 @@ export default function Navigation() {
                   <span className="text-sm text-ivory-100 transition-colors group-hover:text-gold-300">
                     {item.name}
                   </span>
-                </a>
+                </Link>
               ))}
             </div>
 
-            <a
-              href={activeSection.cta.anchor}
+            <Link
+              to={activeSection.cta.to}
               onClick={() => setOpen(false)}
               className="mt-10 inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-300 hover:text-gold-200"
             >
               {activeSection.cta.label}
               <span aria-hidden>&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

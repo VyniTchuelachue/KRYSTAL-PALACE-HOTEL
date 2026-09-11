@@ -36,7 +36,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-ink-950 py-24 text-ivory-50 sm:py-32">
+    <section className="bg-ink-950 py-24 text-ivory-50 sm:py-32">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <div>
           <SectionHeading

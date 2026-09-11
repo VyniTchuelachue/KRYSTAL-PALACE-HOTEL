@@ -2,7 +2,7 @@ import { hotel, testimonial } from '../data/content.js'
 
 export default function Reviews() {
   return (
-    <section id="avis" className="bg-ivory-100 py-24 sm:py-32">
+    <section className="bg-ivory-100 py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-10">
         <span className="text-xs uppercase tracking-[0.3em] text-gold-600 sm:text-sm">Avis clients</span>
         <p className="mt-6 font-display text-3xl leading-relaxed text-charcoal sm:text-4xl">

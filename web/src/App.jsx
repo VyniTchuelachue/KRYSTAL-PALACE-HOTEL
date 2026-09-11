@@ -1,39 +1,37 @@
-import Navigation from './components/Navigation.jsx'
-import Hero from './components/Hero.jsx'
-import BookingBar from './components/BookingBar.jsx'
-import Intro from './components/Intro.jsx'
-import SectionPreviewGrid from './components/SectionPreviewGrid.jsx'
-import Rooms from './components/Rooms.jsx'
-import Dining from './components/Dining.jsx'
-import Wellness from './components/Wellness.jsx'
-import Events from './components/Events.jsx'
-import Offers from './components/Offers.jsx'
-import Reviews from './components/Reviews.jsx'
-import Gallery from './components/Gallery.jsx'
-import Location from './components/Location.jsx'
-import Contact from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout.jsx'
+import Home from './pages/Home.jsx'
+import Chambres from './pages/Chambres.jsx'
+import Restauration from './pages/Restauration.jsx'
+import BienEtre from './pages/BienEtre.jsx'
+import Evenements from './pages/Evenements.jsx'
+import NotreHotel from './pages/NotreHotel.jsx'
+import Offres from './pages/Offres.jsx'
+import Avis from './pages/Avis.jsx'
+import Galerie from './pages/Galerie.jsx'
+import Emplacement from './pages/Emplacement.jsx'
+import Contact from './pages/Contact.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
-    <div className="bg-ivory-50">
-      <Navigation />
-      <main>
-        <Hero />
-        <BookingBar />
-        <Intro />
-        <SectionPreviewGrid />
-        <Rooms />
-        <Dining />
-        <Wellness />
-        <Events />
-        <Offers />
-        <Reviews />
-        <Gallery />
-        <Location />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/chambres" element={<Chambres />} />
+          <Route path="/restauration" element={<Restauration />} />
+          <Route path="/bien-etre" element={<BienEtre />} />
+          <Route path="/evenements" element={<Evenements />} />
+          <Route path="/notre-hotel" element={<NotreHotel />} />
+          <Route path="/offres" element={<Offres />} />
+          <Route path="/avis" element={<Avis />} />
+          <Route path="/galerie" element={<Galerie />} />
+          <Route path="/emplacement" element={<Emplacement />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
