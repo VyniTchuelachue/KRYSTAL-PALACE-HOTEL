@@ -26,10 +26,15 @@ export default function Hero() {
             Luxe &bull; Confort &bull; Excellence
           </p>
           <h1
-            className="animate-fade-up mt-5 max-w-4xl font-display text-4xl leading-[1.1] text-ivory-50 sm:text-6xl lg:text-7xl"
+            aria-label={hotel.tagline}
+            className="animate-fade-up mt-5 max-w-3xl font-display text-[2.1rem] leading-[1.1] text-ivory-50 sm:text-7xl lg:text-8xl"
             style={{ animationDelay: '0.1s' }}
           >
-            {hotel.tagline}
+            <span aria-hidden="true">
+              <span className="block">Pour toi qui cherche</span>
+              <span className="block">le meilleur</span>
+              <span className="block">au Cameroun</span>
+            </span>
           </h1>
           <p
             className="animate-fade-up mt-5 max-w-lg text-base leading-relaxed text-ivory-100/85 sm:text-lg"
