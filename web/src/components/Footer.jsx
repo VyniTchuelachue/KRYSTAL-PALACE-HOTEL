@@ -35,7 +35,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <a href={`mailto:${hotel.email}`} className="hover:text-gold-300">
+                <a href={`mailto:${hotel.email}`} className="break-words hover:text-gold-300">
                   {hotel.email}
                 </a>
               </li>

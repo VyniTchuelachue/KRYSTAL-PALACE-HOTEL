@@ -59,11 +59,11 @@ export default function Navigation() {
             : 'bg-gradient-to-b from-ink-950/60 to-transparent'
         }`}
       >
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:h-20 sm:gap-0 sm:px-6 lg:px-10">
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex items-center gap-3 text-ivory-50/90 transition-colors hover:text-gold-300"
+            className="flex shrink-0 items-center gap-3 text-ivory-50/90 transition-colors hover:text-gold-300"
             aria-expanded={open}
             aria-label="Ouvrir le menu"
           >
@@ -73,11 +73,11 @@ export default function Navigation() {
             </span>
           </button>
 
-          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-            <img src="/img/logo.png" alt={hotel.name} className="h-9 w-auto sm:h-11" />
+          <Link to="/" className="flex min-w-0 shrink items-center" onClick={() => setOpen(false)}>
+            <img src="/img/logo.png" alt={hotel.name} className="h-7 w-auto sm:h-9 lg:h-11" />
           </Link>
 
-          <div className="flex items-center gap-3 sm:gap-6">
+          <div className="flex shrink-0 items-center gap-3 sm:gap-6">
             <a
               href={`tel:${hotel.phones[0].replace(/\s/g, '')}`}
               className="hidden text-sm text-ivory-50/80 transition-colors hover:text-gold-300 md:inline"
@@ -86,7 +86,7 @@ export default function Navigation() {
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center border border-gold-400/80 bg-gold-500 px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-7"
+              className="inline-flex items-center justify-center whitespace-nowrap border border-gold-400/80 bg-gold-500 px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-7 sm:py-2.5 sm:text-xs sm:tracking-[0.2em]"
             >
               Réserver
             </Link>
@@ -100,9 +100,9 @@ export default function Navigation() {
         }`}
         aria-hidden={!open}
       >
-        <div className="flex h-20 items-center justify-between border-b border-ivory-100/10 px-4 sm:px-6 lg:px-10">
+        <div className="flex h-16 items-center justify-between border-b border-ivory-100/10 px-3 sm:h-20 sm:px-6 lg:px-10">
           <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-            <img src="/img/logo.png" alt={hotel.name} className="h-9 w-auto sm:h-11" />
+            <img src="/img/logo.png" alt={hotel.name} className="h-7 w-auto sm:h-9 lg:h-11" />
           </Link>
           <button
             type="button"
@@ -173,7 +173,7 @@ export default function Navigation() {
               <a href={`tel:${hotel.phones[0].replace(/\s/g, '')}`} className="hover:text-gold-300">
                 {hotel.phones[0]}
               </a>
-              <a href={`mailto:${hotel.email}`} className="hover:text-gold-300">
+              <a href={`mailto:${hotel.email}`} className="break-words hover:text-gold-300">
                 {hotel.email}
               </a>
             </div>

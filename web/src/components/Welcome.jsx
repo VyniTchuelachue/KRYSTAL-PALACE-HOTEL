@@ -23,7 +23,7 @@ export default function Welcome() {
                   {hotel.phones[0]}
                 </a>
                 {' · '}
-                <a href={`mailto:${hotel.email}`} className="hover:text-gold-600">
+                <a href={`mailto:${hotel.email}`} className="break-words hover:text-gold-600">
                   {hotel.email}
                 </a>
               </p>

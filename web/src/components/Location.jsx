@@ -37,7 +37,7 @@ export default function Location() {
                   {phone}
                 </a>
               ))}
-              <a href={`mailto:${hotel.email}`} className="text-base text-charcoal hover:text-gold-600">
+              <a href={`mailto:${hotel.email}`} className="break-words text-base text-charcoal hover:text-gold-600">
                 {hotel.email}
               </a>
             </div>

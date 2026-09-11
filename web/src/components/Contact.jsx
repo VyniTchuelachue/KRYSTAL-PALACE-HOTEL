@@ -129,7 +129,7 @@ export default function Contact() {
                 {phone}
               </a>
             ))}
-            <a href={`mailto:${hotel.email}`} className="text-sm hover:text-gold-300">
+            <a href={`mailto:${hotel.email}`} className="break-words text-sm hover:text-gold-300">
               {hotel.email}
             </a>
           </div>
