@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-20 px-4 sm:px-6 lg:px-10">
+      <div className="absolute inset-x-0 bottom-0 z-20 px-4 pb-3 sm:px-6 sm:pb-4 lg:px-10">
         <BookingBar />
       </div>
     </section>
