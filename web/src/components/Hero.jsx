@@ -17,8 +17,8 @@ export default function Hero() {
         alt="Lobby du Krystal Palace Douala"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-ink-950/30" />
-      <div className="absolute inset-0 bg-ink-950/15" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/35 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/50 to-transparent" />
 
       <div className="relative z-10 flex flex-1 flex-col justify-center px-4 py-10 sm:px-6 lg:px-10">
         <div className="mx-auto w-full max-w-7xl">
