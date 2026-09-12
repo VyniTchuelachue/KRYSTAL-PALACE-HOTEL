@@ -211,6 +211,59 @@ export const testimonial = {
   source: 'Tripadvisor',
 }
 
+export const guestTestimonials = [
+  {
+    text: 'Notre séjour s’est très bien passé. Un accueil et un service exceptionnels du début à la fin, avec un geste qui nous a agréablement surpris à l’arrivée.',
+    name: 'Thérèse Ngo Kwablag',
+    role: 'Avis Google · 4/5 · il y a 4 mois',
+  },
+  {
+    text: 'Bel hôtel, personnel adorable et attentionné, chambres impeccables, et une cafétéria pleine de bonnes surprises.',
+    name: 'marieanne65',
+    role: 'Avis Tripadvisor · 5/5 · il y a 2 mois',
+  },
+  {
+    text: 'Le luxe rencontre l’innovation en plein cœur de Douala. Un hôtel 5 étoiles qui se distingue vraiment par son raffinement.',
+    name: 'MamharK',
+    role: 'Avis Google · 5/5 · il y a 6 mois',
+  },
+  {
+    text: 'Un hôtel de luxe très chaleureux. Personnel accueillant, respectueux et à l’écoute, dans un établissement très sécurisé.',
+    name: 'Yolande Koutou',
+    role: 'Avis Google · 5/5 · il y a 7 mois',
+  },
+  {
+    text: 'Sans doute l’un des plus beaux séjours vécus au Cameroun. Le Krystal Palace respire la classe : chambres confortables, petit-déjeuner copieux et personnel très bien formé.',
+    name: "'Niyi David",
+    role: 'Avis Tripadvisor · il y a 5 mois',
+  },
+  {
+    text: 'Un accueil chaleureux et un personnel aux petits soins du début à la fin. Toute l’équipe s’est surpassée pour rendre notre séjour mémorable.',
+    name: 'Yvonne G.',
+    role: 'Avis Tripadvisor · il y a 3 mois',
+  },
+  {
+    text: 'Un cadre magnifique pour une journée de travail, un accueil de qualité et une équipe très réactive.',
+    name: 'Claudelen M.',
+    role: 'Avis Tripadvisor · il y a 8 mois',
+  },
+  {
+    text: 'Notre événement s’est parfaitement déroulé au Krystal Palace. Une expérience exceptionnelle pour nous et nos invités dans leur salle de réception.',
+    name: 'Tchoungong Nana L.',
+    role: 'Avis Tripadvisor · il y a 9 mois',
+  },
+  {
+    text: 'L’endroit rêvé pour se détendre. Un service attentionné et un personnel d’une grande bienveillance : à visiter sans hésiter.',
+    name: 'Motoko Oyong J.',
+    role: 'Avis Tripadvisor · il y a 1 an',
+  },
+  {
+    text: 'Un hôtel très propre avec des chambres spacieuses. Personnel toujours souriant et serviable, piscine agréable et rafraîchissante.',
+    name: 'M. A.',
+    role: 'Avis Tripadvisor · il y a 2 ans',
+  },
+]
+
 export const nearby = [
   { label: "Aéroport International de Douala", distance: '10 km · env. 20 min' },
   { label: "Musée Doual'art", distance: '3 km' },
