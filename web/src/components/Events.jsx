@@ -4,7 +4,7 @@ import SectionHeading from './ui/SectionHeading.jsx'
 const events = [
   {
     name: 'Mariages',
-    image: '/img/wedding.jpg',
+    image: '/img/event-wedding-table.jpg',
     copy: 'Dites oui au bord de notre piscine ou dans nos salons, pour une cérémonie mémorable.',
   },
   {

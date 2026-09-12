@@ -4,7 +4,7 @@ import Intro from '../components/Intro.jsx'
 export default function NotreHotel() {
   return (
     <>
-      <PageHeader eyebrow="Depuis Akwa" title="Notre Hôtel" image="/img/lounge-sunset.jpg" />
+      <PageHeader eyebrow="Depuis Akwa" title="Notre Hôtel" image="/img/night-exterior.jpg" />
       <Intro />
     </>
   )

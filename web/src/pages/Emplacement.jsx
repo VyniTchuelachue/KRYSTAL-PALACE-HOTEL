@@ -4,7 +4,7 @@ import Location from '../components/Location.jsx'
 export default function Emplacement() {
   return (
     <>
-      <PageHeader eyebrow="Akwa, Douala" title="Emplacement" image="/img/hero-pool.jpg" />
+      <PageHeader eyebrow="Akwa, Douala" title="Emplacement" image="/img/exterior-day.jpg" />
       <Location />
     </>
   )

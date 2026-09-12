@@ -42,7 +42,8 @@ export const navSections = [
     items: [
       { name: 'Restaurant & Cafétéria', image: '/img/dining-canapes.jpg', to: '/restauration' },
       { name: 'Krystal Spa', image: '/img/spa.jpg', to: '/bien-etre' },
-      { name: 'Piscine & Terrasse', image: '/img/terrace.jpg', to: '/bien-etre' },
+      { name: 'Piscine & Terrasse', image: '/img/pool-loungers.jpg', to: '/bien-etre' },
+      { name: 'Sport & Fitness', image: '/img/fitness-class.jpg', to: '/bien-etre' },
     ],
   },
   {
@@ -51,7 +52,7 @@ export const navSections = [
     to: '/evenements',
     cta: { label: 'Organiser un événement', to: '/evenements' },
     items: [
-      { name: 'Mariages', image: '/img/wedding.jpg', to: '/evenements' },
+      { name: 'Mariages', image: '/img/event-wedding-table.jpg', to: '/evenements' },
       { name: 'Séminaires & Réceptions', image: '/img/event-dinner.jpg', to: '/evenements' },
       { name: 'Espace Enfants', image: '/img/kids.jpg', to: '/evenements' },
     ],
@@ -62,7 +63,7 @@ export const navSections = [
     to: '/notre-hotel',
     cta: { label: 'En savoir plus sur nous', to: '/notre-hotel' },
     items: [
-      { name: 'Notre histoire', image: '/img/african-decor.jpg', to: '/notre-hotel' },
+      { name: 'Notre histoire', image: '/img/night-exterior.jpg', to: '/notre-hotel' },
       { name: 'Douala & ses environs', image: '/img/lounge-sunset.jpg', to: '/emplacement' },
       { name: 'Galerie photos', image: '/img/lobby-1.jpg', to: '/galerie' },
     ],
@@ -189,17 +190,23 @@ export const sectionPreviews = [
 ]
 
 export const galleryImages = [
+  { src: '/img/night-exterior.jpg', alt: 'Façade du Krystal Palace Douala de nuit, vue aérienne' },
+  { src: '/img/exterior-day.jpg', alt: 'Façade du Krystal Palace Douala de jour' },
   { src: '/img/hero-background.jpg', alt: 'Hall d’accueil du Krystal Palace Douala' },
   { src: '/img/hero-pool.jpg', alt: 'Piscine sur le toit du Krystal Palace' },
+  { src: '/img/pool-loungers.jpg', alt: 'Transats au bord de la piscine' },
   { src: '/img/lobby-1.jpg', alt: 'Lobby du Krystal Palace Douala' },
   { src: '/img/lobby-2.jpg', alt: 'Réception fleurie du hall' },
   { src: '/img/entrance-night.jpg', alt: 'Entrée de nuit du Krystal Palace' },
   { src: '/img/room-05.jpg', alt: 'Executive Suite avec salle de bain vitrée' },
   { src: '/img/terrace.jpg', alt: 'Terrasse au coucher du soleil' },
   { src: '/img/lounge-sunset.jpg', alt: 'Salon panoramique au coucher du soleil sur le Wouri' },
-  { src: '/img/wedding.jpg', alt: 'Cérémonie de mariage au bord de la piscine' },
+  { src: '/img/event-wedding-table.jpg', alt: 'Table de mariage dressée au Krystal Palace' },
+  { src: '/img/event-hall-gold.jpg', alt: 'Salle de réception aménagée pour un mariage' },
+  { src: '/img/event-hall-pink.jpg', alt: 'Salle de réception thème rose et blanc' },
   { src: '/img/dining-canapes.jpg', alt: 'Canapés gastronomiques du Krystal Palace' },
   { src: '/img/spa.jpg', alt: 'Salon du Krystal Spa' },
+  { src: '/img/fitness-class.jpg', alt: 'Cours de fitness collectif sur le toit' },
   { src: '/img/kids.jpg', alt: 'Espace des enfants' },
   { src: '/img/african-decor.jpg', alt: 'Décor aux touches africaines' },
 ]

@@ -8,8 +8,13 @@ const spaces = [
   },
   {
     name: 'Piscine sur le toit',
-    image: '/img/terrace.jpg',
+    image: '/img/pool-loungers.jpg',
     copy: 'Une terrasse suspendue au-dessus de Douala, idéale pour un bain ou un cocktail au coucher du soleil.',
+  },
+  {
+    name: 'Sport & Fitness',
+    image: '/img/fitness-class.jpg',
+    copy: 'Cours collectifs et espace sportif sur le toit, pour garder le rythme même en déplacement.',
   },
   {
     name: 'Vue sur le Wouri',
@@ -27,7 +32,7 @@ export default function Wellness() {
           title="Se ressourcer, entre spa, piscine et vue sur le fleuve"
           description="Accessibles à tous nos hôtes, nos espaces de bien-être invitent à la détente après une journée d’affaires ou de découverte de Douala."
         />
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {spaces.map((space) => (
             <div key={space.name} className="group">
               <div className="aspect-[3/4] overflow-hidden">
