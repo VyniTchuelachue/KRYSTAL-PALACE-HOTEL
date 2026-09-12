@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
+import SectionHeading from './ui/SectionHeading.jsx'
 import { TestimonialsColumn } from './TestimonialsColumn.jsx'
 import { guestTestimonials, hotel } from '../data/content.js'
 
@@ -16,16 +17,14 @@ export default function GoogleTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="mx-auto flex max-w-xl flex-col items-center text-center"
+          className="mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-gold-600 sm:text-sm">Avis Vérifiés</span>
-          <h2 className="mt-4 font-display text-3xl leading-tight text-charcoal sm:text-4xl md:text-5xl">
-            Ce que disent nos clients
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-charcoal-dim">
-            {hotel.ratings.google.score}/5 sur Google ({hotel.ratings.google.count.toLocaleString('fr-FR')} avis)
-            &middot; {hotel.ratings.tripadvisor.score}/5 sur Tripadvisor ({hotel.ratings.tripadvisor.count} avis)
-          </p>
+          <SectionHeading
+            eyebrow="Avis Vérifiés"
+            title="Ce que disent nos clients"
+            description={`${hotel.ratings.google.score}/5 sur Google (${hotel.ratings.google.count.toLocaleString('fr-FR')} avis) · ${hotel.ratings.tripadvisor.score}/5 sur Tripadvisor (${hotel.ratings.tripadvisor.count} avis)`}
+            align="center"
+          />
         </motion.div>
 
         <div className="mt-14 flex max-h-[640px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">

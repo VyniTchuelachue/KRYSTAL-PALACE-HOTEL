@@ -71,7 +71,7 @@ export const navSections = [
 ]
 
 export const simpleLinks = [
-  { label: 'Offres', to: '/offres' },
+  { label: 'Expériences', to: '/experiences' },
   { label: 'Avis clients', to: '/avis' },
   { label: 'Emplacement', to: '/emplacement' },
   { label: 'Contact', to: '/contact' },
@@ -268,6 +268,30 @@ export const guestTestimonials = [
     text: 'Un hôtel très propre avec des chambres spacieuses. Personnel toujours souriant et serviable, piscine agréable et rafraîchissante.',
     name: 'M. A.',
     role: 'Avis Tripadvisor · il y a 2 ans',
+  },
+]
+
+export const experiences = [
+  {
+    name: 'Séjours Affaires',
+    icon: 'briefcase',
+    image: '/img/experience-business.jpg',
+    copy: "Tout ce qu'il faut pour travailler, se retrouver et séjourner avec élégance.",
+    linkLabel: 'Explorer',
+  },
+  {
+    name: 'Escapades Romantiques',
+    icon: 'heart',
+    image: '/img/experience-romance.jpg',
+    copy: 'Suites, vues sur le Wouri et instants privilégiés à deux.',
+    linkLabel: 'Découvrir',
+  },
+  {
+    name: 'Célébrations & Groupes',
+    icon: 'users',
+    image: '/img/experience-celebration.jpg',
+    copy: 'Des espaces et une attention particulière pour vos événements.',
+    linkLabel: 'Découvrir',
   },
 ]
 

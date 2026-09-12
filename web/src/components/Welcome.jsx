@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SectionHeading from './ui/SectionHeading.jsx'
 import { hotel } from '../data/content.js'
 
 export default function Welcome() {
@@ -7,15 +8,11 @@ export default function Welcome() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-gold-600 sm:text-sm">Bienvenue</span>
-            <h2 className="mt-4 font-display text-3xl leading-tight text-charcoal sm:text-4xl md:text-5xl">
-              Le meilleur de Douala, Boulevard de la Liberté
-            </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal-dim">
-              Le Krystal Palace Douala offre un raffinement 5 étoiles au cœur du quartier des affaires
-              d’Akwa. Décor chic aux touches africaines, chambres en étage élevé avec vue sur la ville ou le
-              fleuve Wouri, et un service pensé pour ceux qui cherchent le meilleur au Cameroun.
-            </p>
+            <SectionHeading
+              eyebrow="Bienvenue"
+              title="Le meilleur de Douala, Boulevard de la Liberté"
+              description="Le Krystal Palace Douala offre un raffinement 5 étoiles au cœur du quartier des affaires d’Akwa. Décor chic aux touches africaines, chambres en étage élevé avec vue sur la ville ou le fleuve Wouri, et un service pensé pour ceux qui cherchent le meilleur au Cameroun."
+            />
             <div className="mt-8 flex flex-col gap-1 text-sm text-charcoal-dim">
               <p>{hotel.address}</p>
               <p>

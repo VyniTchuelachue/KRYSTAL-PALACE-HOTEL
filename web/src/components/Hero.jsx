@@ -26,7 +26,7 @@ export default function Hero() {
             Luxe &bull; Confort &bull; Excellence
           </p>
           <h1
-            className="animate-fade-up mt-5 max-w-2xl font-display text-3xl font-bold leading-[1.15] text-ivory-50 sm:text-4xl lg:text-5xl"
+            className="animate-fade-up mt-5 max-w-2xl font-display text-3xl leading-[1.15] text-ivory-50 sm:text-4xl lg:text-5xl"
             style={{ animationDelay: '0.1s' }}
           >
             {hotel.tagline}

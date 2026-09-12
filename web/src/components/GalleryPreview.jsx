@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SectionHeading from './ui/SectionHeading.jsx'
 import { galleryImages } from '../data/content.js'
 
 const picks = galleryImages.slice(0, 6)
@@ -8,12 +9,7 @@ export default function GalleryPreview() {
     <section className="bg-ivory-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <span className="text-xs uppercase tracking-[0.3em] text-gold-600 sm:text-sm">En images</span>
-            <h2 className="mt-4 font-display text-3xl leading-tight text-charcoal sm:text-4xl md:text-5xl">
-              Le Krystal Palace en images
-            </h2>
-          </div>
+          <SectionHeading eyebrow="En Images" title="Le Krystal Palace en images" />
           <Link
             to="/galerie"
             className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-gold-600 hover:text-gold-700"

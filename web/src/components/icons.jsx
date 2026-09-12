@@ -69,6 +69,33 @@ export function IconCard({ className = 'h-5 w-5' }) {
   )
 }
 
+export function IconBriefcase({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="3" y="7.5" width="18" height="12" rx="1.5" />
+      <path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5M3 12.5h18" />
+    </svg>
+  )
+}
+
+export function IconHeart({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M12 20.5s-7.5-4.6-9.8-9.3C.7 8 2 4.8 5.2 4.1c2-.4 3.9.5 4.9 2.2 1-1.7 2.9-2.6 4.9-2.2 3.2.7 4.5 3.9 3 7.1-2.3 4.7-9.8 9.3-9.8 9.3z" />
+    </svg>
+  )
+}
+
+export function IconUsers({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="9" cy="8" r="3" />
+      <path d="M2.5 19c1.1-3.3 3.5-5 6.5-5s5.4 1.7 6.5 5" />
+      <path d="M15.5 5.3a3 3 0 0 1 0 5.7M18.5 19c-.5-2.2-1.5-3.8-3-4.7" />
+    </svg>
+  )
+}
+
 export function IconArrow({ className = 'h-4 w-4' }) {
   return (
     <svg {...base} className={className}>
