@@ -37,8 +37,8 @@ export default function Welcome() {
           </div>
           <div className="relative">
             <img
-              src="/img/african-decor.jpg"
-              alt="Décor aux touches artistiques africaines du Krystal Palace"
+              src="/img/welcome-facade.jpg"
+              alt="Façade du Krystal Palace Douala au crépuscule"
               className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute -bottom-6 -left-6 hidden h-32 w-32 border border-gold-400/60 sm:block" />
