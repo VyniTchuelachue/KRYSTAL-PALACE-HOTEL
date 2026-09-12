@@ -76,7 +76,7 @@ export default function BookingBar() {
         type="submit"
         className="flex items-center justify-center gap-2 bg-gold-500 px-6 py-4 text-xs uppercase tracking-[0.15em] text-ink-950 transition-colors hover:bg-gold-400 sm:px-8 sm:py-5 sm:text-sm sm:tracking-[0.2em]"
       >
-        Vérifier les disponibilités
+        Réserver
       </button>
     </form>
   )
