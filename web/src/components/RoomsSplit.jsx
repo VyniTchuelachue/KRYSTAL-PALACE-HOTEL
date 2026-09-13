@@ -11,7 +11,7 @@ export default function RoomsSplit() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <img
-            src="/img/room-01.jpg"
+            src="/img/room-suite-attends.jpg"
             alt="Chambre du Krystal Palace Douala"
             className="aspect-[4/3] w-full object-cover"
           />
