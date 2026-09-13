@@ -13,11 +13,19 @@ export default function Experiences() {
   return (
     <section className="bg-ivory-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <SectionHeading
-          eyebrow="Expériences"
-          title="Une adresse pour chaque façon de séjourner"
-          description="À Douala, Krystal Palace vous accompagne pour vos déplacements professionnels, vos escapades à deux et vos plus beaux moments à célébrer."
-        />
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading
+            eyebrow="Expériences"
+            title="Une adresse pour chaque façon de séjourner"
+            description="À Douala, Krystal Palace vous accompagne pour vos déplacements professionnels, vos escapades à deux et vos plus beaux moments à célébrer."
+          />
+          <Link
+            to="/experiences"
+            className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-gold-600 hover:text-gold-700"
+          >
+            Voir toutes les expériences <span aria-hidden>&rarr;</span>
+          </Link>
+        </div>
 
         <div className="mt-8 grid grid-cols-3 gap-2 sm:mt-14 sm:gap-4 lg:gap-6">
           {experiences.map((experience) => {
@@ -50,15 +58,6 @@ export default function Experiences() {
               </div>
             )
           })}
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            to="/experiences"
-            className="inline-flex items-center gap-3 border border-gold-500/70 px-8 py-3.5 text-xs uppercase tracking-[0.18em] text-gold-600 transition-colors hover:bg-gold-500 hover:text-ink-950 sm:text-sm"
-          >
-            Voir toutes nos expériences <IconArrow className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </section>

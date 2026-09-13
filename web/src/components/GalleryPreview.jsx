@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import SectionHeading from './ui/SectionHeading.jsx'
 import { galleryImages } from '../data/content.js'
 
-const picks = galleryImages.slice(0, 6)
+const picks = galleryImages.slice(0, 5)
 
 export default function GalleryPreview() {
   return (
@@ -18,9 +18,9 @@ export default function GalleryPreview() {
           </Link>
         </div>
 
-        <div className="mt-10 grid grid-cols-3 gap-3 sm:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-5">
           {picks.map((image) => (
-            <Link key={image.src} to="/galerie" className="group aspect-square overflow-hidden">
+            <Link key={image.src} to="/galerie" className="group aspect-[4/3] overflow-hidden">
               <img
                 src={image.src}
                 alt={image.alt}

@@ -162,31 +162,76 @@ export const sectionPreviews = [
   {
     id: 'chambres',
     label: 'Chambres & Suites',
-    copy: '12 catégories, des chambres Twin aux suites signature Mandela et Meugang.',
+    copy: 'Confort absolu, élégance raffinée.',
+    icon: 'bed',
     image: '/img/preview-chambres.jpg',
     to: '/chambres',
   },
   {
     id: 'restauration',
     label: 'Restauration',
-    copy: 'Restaurant, cafétéria et room service au cœur du quartier des affaires.',
+    copy: 'Une cuisine d’exception, locale et internationale.',
+    icon: 'fork',
     image: '/img/preview-restauration.jpg',
     to: '/restauration',
   },
   {
     id: 'bien-etre',
     label: 'Bien-être',
-    copy: 'Krystal Spa, piscine sur le toit et vue sur le fleuve Wouri.',
+    copy: 'Détente et sérénité au quotidien.',
+    icon: 'leaf',
     image: '/img/preview-bien-etre.jpg',
     to: '/bien-etre',
   },
   {
     id: 'evenements',
     label: 'Événements',
-    copy: 'Mariages, séminaires et réceptions privées dans un cadre d’exception.',
+    copy: 'Des moments uniques pour vos occasions.',
+    icon: 'users',
     image: '/img/preview-evenements.jpg',
     to: '/evenements',
   },
+]
+
+export const aboutStats = [
+  { value: '5★', label: 'Hôtel 5 étoiles' },
+  { value: 'Douala', label: 'Centre-ville' },
+  { value: '+10 ans', label: "d'excellence" },
+]
+
+export const experienceSteps = [
+  { number: '01', icon: 'bed', label: 'Dormir', copy: 'Des chambres et suites au confort absolu.' },
+  { number: '02', icon: 'fork', label: 'Savourer', copy: 'Une cuisine qui célèbre les saveurs locales et internationales.' },
+  { number: '03', icon: 'leaf', label: 'Se détendre', copy: 'Un espace dédié au bien-être et à la relaxation.' },
+]
+
+export const roomAmenities = [
+  { icon: 'wifi', label: 'Wi-Fi haut débit' },
+  { icon: 'bell', label: 'Service en chambre 24h/24' },
+  { icon: 'snowflake', label: 'Climatisation' },
+  { icon: 'city', label: 'Vue sur la ville' },
+]
+
+export const diningWellnessTeasers = [
+  {
+    eyebrow: 'Restaurant & Bar',
+    title: 'Une cuisine qui inspire',
+    linkLabel: 'Voir le menu',
+    to: '/restauration',
+    image: '/img/dining-canapes.jpg',
+  },
+  {
+    eyebrow: 'Spa & Bien-être',
+    title: 'Un équilibre parfait',
+    linkLabel: 'Découvrir',
+    to: '/bien-etre',
+    image: '/img/spa.jpg',
+  },
+]
+
+export const legalLinks = [
+  { label: 'Mentions légales', to: '/mentions-legales' },
+  { label: 'Politique de confidentialité', to: '/confidentialite' },
 ]
 
 export const galleryImages = [

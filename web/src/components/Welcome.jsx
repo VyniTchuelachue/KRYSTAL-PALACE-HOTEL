@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SectionHeading from './ui/SectionHeading.jsx'
-import { hotel } from '../data/content.js'
+import { aboutStats } from '../data/content.js'
 
 export default function Welcome() {
   return (
@@ -9,36 +9,31 @@ export default function Welcome() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <SectionHeading
-              eyebrow="Bienvenue"
+              eyebrow="À propos de l'hôtel"
               title="Le meilleur de Douala, Boulevard de la Liberté"
-              description="Le Krystal Palace Douala offre un raffinement 5 étoiles au cœur du quartier des affaires d’Akwa. Décor chic aux touches africaines, chambres en étage élevé avec vue sur la ville ou le fleuve Wouri, et un service pensé pour ceux qui cherchent le meilleur au Cameroun."
+              description="Le Krystal Palace Douala est un hôtel 5 étoiles au cœur du quartier des affaires. Découvrez un cadre d'exception, des chambres élégantes, une cuisine raffinée et des services haut de gamme pour un séjour inoubliable."
             />
-            <div className="mt-8 flex flex-col gap-1 text-sm text-charcoal-dim">
-              <p>{hotel.address}</p>
-              <p>
-                <a href={`tel:${hotel.phones[0].replace(/\s/g, '')}`} className="hover:text-gold-600">
-                  {hotel.phones[0]}
-                </a>
-                {' · '}
-                <a href={`mailto:${hotel.email}`} className="break-words hover:text-gold-600">
-                  {hotel.email}
-                </a>
-              </p>
+            <div className="mt-8 flex flex-wrap gap-8 sm:gap-12">
+              {aboutStats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-display text-2xl text-gold-600 sm:text-3xl">{stat.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.15em] text-charcoal-dim">{stat.label}</p>
+                </div>
+              ))}
             </div>
             <Link
               to="/notre-hotel"
-              className="mt-8 inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-600 hover:text-gold-700"
+              className="mt-10 inline-flex items-center gap-3 border border-gold-500/70 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-gold-600 transition-colors hover:bg-gold-500 hover:text-ink-950 sm:text-sm"
             >
-              Découvrir l&apos;hôtel <span aria-hidden>&rarr;</span>
+              En savoir plus
             </Link>
           </div>
           <div className="relative">
             <img
-              src="/img/welcome-facade.jpg"
-              alt="Façade du Krystal Palace Douala au crépuscule"
+              src="/img/exterior-day.jpg"
+              alt="Façade du Krystal Palace Douala de jour"
               className="aspect-[4/5] w-full object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 hidden h-32 w-32 border border-gold-400/60 sm:block" />
           </div>
         </div>
       </div>
