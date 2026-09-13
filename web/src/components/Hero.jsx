@@ -11,7 +11,11 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/35 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/50 to-transparent" />
+      <div className="absolute inset-0 px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto h-full w-full max-w-7xl">
+          <div className="h-full max-w-2xl bg-gradient-to-r from-ink-950/90 via-ink-950/70 to-transparent" />
+        </div>
+      </div>
 
       <div className="relative z-10 flex flex-1 flex-col justify-center px-4 py-10 sm:px-6 lg:px-10">
         <div className="mx-auto w-full max-w-7xl">
