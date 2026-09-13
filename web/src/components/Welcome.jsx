@@ -30,8 +30,8 @@ export default function Welcome() {
           </div>
           <div className="relative">
             <img
-              src="/img/exterior-day.jpg"
-              alt="Façade du Krystal Palace Douala de jour"
+              src="/img/about-facade.jpg"
+              alt="Entrée du Krystal Palace Douala au crépuscule"
               className="aspect-[4/5] w-full object-cover"
             />
           </div>
