@@ -19,9 +19,15 @@ function initials(name) {
 
 function ReviewCard({ name, role, text }) {
   return (
-    <div className="flex h-full w-72 shrink-0 cursor-default flex-col gap-3 border border-ivory-200 bg-ivory-50 p-5 sm:w-80">
-      <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-200 text-xs font-medium text-gold-700">
+    <div className="group flex h-full w-72 shrink-0 cursor-default flex-col gap-3 rounded-2xl border border-gold-200/50 bg-ivory-50 p-6 shadow-[0_2px_12px_rgba(17,17,17,0.05)] transition-shadow duration-300 hover:shadow-[0_8px_24px_rgba(17,17,17,0.1)] sm:w-80">
+      <span className="font-display text-5xl leading-none text-gold-300/80" aria-hidden="true">
+        &ldquo;
+      </span>
+      <p className="line-clamp-3 flex-1 font-display text-base italic leading-relaxed text-charcoal">
+        {text}
+      </p>
+      <div className="flex items-center gap-3 border-t border-ivory-200 pt-4">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold-200 to-gold-400 text-xs font-medium text-ink-950 ring-1 ring-gold-400/40">
           {initials(name)}
         </span>
         <div className="flex min-w-0 flex-col">
@@ -29,7 +35,6 @@ function ReviewCard({ name, role, text }) {
           <p className="truncate text-xs text-charcoal-dim">{role}</p>
         </div>
       </div>
-      <p className="line-clamp-3 text-sm leading-relaxed text-charcoal-dim">{text}</p>
     </div>
   )
 }
