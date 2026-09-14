@@ -218,14 +218,14 @@ export const diningWellnessTeasers = [
     title: 'Une cuisine qui inspire',
     linkLabel: 'Voir le menu',
     to: '/restauration',
-    image: '/img/dining-canapes.jpg',
+    image: '/img/dining-inspire.jpg',
   },
   {
     eyebrow: 'Spa & Bien-être',
     title: 'Un équilibre parfait',
     linkLabel: 'Découvrir',
     to: '/bien-etre',
-    image: '/img/spa.jpg',
+    image: '/img/spa-equilibre.jpg',
   },
 ]
 
