@@ -1,16 +1,35 @@
 import { Link } from 'react-router-dom'
 import SectionHeading from './ui/SectionHeading.jsx'
+import { Marquee } from './ui/marquee.jsx'
 import { guestTestimonials, hotel } from '../data/content.js'
-import { IconStarFilled } from './icons.jsx'
 
-const featured = [guestTestimonials[3], guestTestimonials[2], guestTestimonials[7]]
+const firstRow = guestTestimonials.slice(0, Math.ceil(guestTestimonials.length / 2))
+const secondRow = guestTestimonials.slice(Math.ceil(guestTestimonials.length / 2))
 
-function Stars({ className = 'h-3.5 w-3.5' }) {
+function initials(name) {
+  return name
+    .replace(/['’]/g, '')
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase()
+}
+
+function ReviewCard({ name, role, text }) {
   return (
-    <div className="flex gap-0.5 text-gold-500">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <IconStarFilled key={i} className={className} />
-      ))}
+    <div className="flex h-full w-72 shrink-0 cursor-default flex-col gap-3 border border-ivory-200 bg-ivory-50 p-5 sm:w-80">
+      <div className="flex items-center gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-200 text-xs font-medium text-gold-700">
+          {initials(name)}
+        </span>
+        <div className="flex min-w-0 flex-col">
+          <p className="truncate text-sm font-medium text-charcoal">{name}</p>
+          <p className="truncate text-xs text-charcoal-dim">{role}</p>
+        </div>
+      </div>
+      <p className="line-clamp-3 text-sm leading-relaxed text-charcoal-dim">{text}</p>
     </div>
   )
 }
@@ -19,44 +38,36 @@ export default function GoogleTestimonials() {
   return (
     <section className="bg-ivory-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <SectionHeading eyebrow="Témoignages" title="Ce que disent nos clients" align="center" />
+        <SectionHeading
+          eyebrow="Témoignages"
+          title="Ce que disent nos clients"
+          description={`${hotel.ratings.google.score}/5 sur Google (${hotel.ratings.google.count.toLocaleString('fr-FR')} avis) · ${hotel.ratings.tripadvisor.score}/5 sur Tripadvisor (${hotel.ratings.tripadvisor.count} avis)`}
+          align="center"
+        />
+      </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3 sm:items-center sm:gap-4 lg:gap-6">
-          {featured.map((testimonial, i) => {
-            const isCenter = i === 1
-            return (
-              <div
-                key={testimonial.name}
-                className={`flex flex-col gap-4 p-8 ${
-                  isCenter
-                    ? 'bg-ivory-50 shadow-xl sm:scale-105 sm:py-10'
-                    : 'bg-ivory-50/60'
-                }`}
-              >
-                <Stars />
-                <p className="font-display text-lg italic leading-relaxed text-charcoal">
-                  &ldquo;{testimonial.text}&rdquo;
-                </p>
-                <p className="text-sm text-charcoal-dim">&mdash; {testimonial.name}</p>
-                {isCenter && (
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-ivory-200 pt-4 text-xs text-charcoal-dim">
-                    <span>{hotel.ratings.google.score}/5 Google</span>
-                    <span>{hotel.ratings.tripadvisor.score}/5 Tripadvisor</span>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
+      <div className="relative mt-14 flex w-full flex-col items-center gap-4 overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:32s]">
+          {firstRow.map((testimonial) => (
+            <ReviewCard key={testimonial.name} {...testimonial} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:32s]">
+          {secondRow.map((testimonial) => (
+            <ReviewCard key={testimonial.name} {...testimonial} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-ivory-100 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-ivory-100 to-transparent" />
+      </div>
 
-        <div className="mt-10 flex justify-center">
-          <Link
-            to="/avis"
-            className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-gold-600 hover:text-gold-700"
-          >
-            Voir tous les avis <span aria-hidden>&rarr;</span>
-          </Link>
-        </div>
+      <div className="mt-10 flex justify-center">
+        <Link
+          to="/avis"
+          className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-gold-600 hover:text-gold-700"
+        >
+          Voir tous les avis <span aria-hidden>&rarr;</span>
+        </Link>
       </div>
     </section>
   )
