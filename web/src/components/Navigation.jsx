@@ -24,7 +24,7 @@ function MenuIcon({ open }) {
 export default function Navigation() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeId, setActiveId] = useState(navSections[0].id)
+  const [activeId, setActiveId] = useState(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -124,8 +124,8 @@ export default function Navigation() {
                 <li key={section.id} className="border-b border-ivory-100/10">
                   <button
                     type="button"
-                    onClick={() => setActiveId(section.id)}
-                    onMouseEnter={() => setActiveId(section.id)}
+                    onClick={() => setActiveId((current) => (current === section.id ? null : section.id))}
+                    aria-expanded={activeId === section.id}
                     className={`flex w-full items-center justify-between py-4 text-left font-display text-2xl transition-colors sm:text-3xl ${
                       activeId === section.id ? 'text-gold-300' : 'text-ivory-50 hover:text-gold-300'
                     }`}
