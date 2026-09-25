@@ -158,100 +158,105 @@ export const allRoomCategories = [
   { name: 'Mandela Suite', surface: '160 m²', capacity: '2 pers.' },
 ]
 
-export const sectionPreviews = [
+export const amenityHighlights = [
+  { icon: 'bed', label: 'Chambres & Suites élégantes' },
+  { icon: 'fork', label: 'Restaurant gastronomique' },
+  { icon: 'leaf', label: 'Spa & bien-être de classe mondiale' },
+  { icon: 'dumbbell', label: 'Salle de sport moderne' },
+  { icon: 'pool', label: 'Piscine extérieure avec terrasse' },
+  { icon: 'car', label: 'Parking sécurisé et navette' },
+]
+
+export const homeFeatures = [
   {
     id: 'chambres',
-    label: 'Chambres & Suites',
-    copy: 'Confort absolu, élégance raffinée.',
-    icon: 'bed',
-    image: '/img/preview-chambres.jpg',
-    to: '/chambres',
+    eyebrow: 'Nos chambres & suites',
+    title: 'Un confort pensé pour vous',
+    description:
+      'Des chambres spacieuses et élégamment décorées, alliant confort moderne et touche d’élégance africaine.',
+    cta: { label: 'Voir toutes les chambres', to: '/chambres' },
+    images: [
+      { src: '/img/room-suite-attends.jpg', alt: 'Chambre du Krystal Palace Douala' },
+      { src: '/img/room-02.jpg', alt: 'Chambre Premium Plus' },
+      { src: '/img/room-03.jpg', alt: 'Chambre Deluxe' },
+      { src: '/img/room-05.jpg', alt: 'Executive Suite avec salle de bain vitrée' },
+    ],
+    imageSide: 'right',
+    dark: false,
   },
   {
     id: 'restauration',
-    label: 'Restauration',
-    copy: 'Une cuisine d’exception, locale et internationale.',
-    icon: 'fork',
-    image: '/img/preview-restauration.jpg',
-    to: '/restauration',
+    eyebrow: 'Restaurant & Bar',
+    title: 'Une cuisine qui éveille les sens',
+    description:
+      'Découvrez une gastronomie raffinée mêlant saveurs locales et internationales dans un cadre élégant et chaleureux.',
+    cta: { label: 'Découvrir notre restaurant', to: '/restauration' },
+    images: [{ src: '/img/dining-inspire.jpg', alt: 'Assiette gastronomique du restaurant' }],
+    imageSide: 'left',
+    dark: true,
   },
   {
     id: 'bien-etre',
-    label: 'Bien-être',
-    copy: 'Détente et sérénité au quotidien.',
-    icon: 'leaf',
-    image: '/img/preview-bien-etre.jpg',
-    to: '/bien-etre',
+    eyebrow: 'Bien-être & détente',
+    title: 'Un espace pour se ressourcer',
+    description:
+      'Profitez de notre piscine, de notre spa, de notre salle de sport et de nos soins sur mesure pour un moment de pure relaxation.',
+    cta: { label: 'Découvrir nos espaces bien-être', to: '/bien-etre' },
+    images: [{ src: '/img/pool-loungers.jpg', alt: 'Transats au bord de la piscine' }],
+    imageSide: 'right',
+    dark: false,
   },
   {
     id: 'evenements',
-    label: 'Événements',
-    copy: 'Des moments uniques pour vos occasions.',
-    icon: 'users',
-    image: '/img/preview-evenements.jpg',
-    to: '/evenements',
+    eyebrow: 'Événements',
+    title: 'Des lieux d’exception pour vos moments importants',
+    description:
+      'Mariages, réceptions privées, séminaires ou conférences, nos espaces s’adaptent à toutes vos exigences.',
+    cta: { label: 'Nos salles & événements', to: '/evenements' },
+    images: [{ src: '/img/event-hall-gold.jpg', alt: 'Salle de réception aménagée pour un événement' }],
+    imageSide: 'left',
+    dark: false,
   },
 ]
 
-export const aboutStats = [
-  { value: '5★', label: 'Hôtel 5 étoiles' },
-  { value: 'Douala', label: 'Centre-ville' },
-  { value: '+10 ans', label: "d'excellence" },
+export const footerLinks = [
+  { label: 'Accueil', to: '/' },
+  { label: 'Chambres', to: '/chambres' },
+  { label: 'Restaurant', to: '/restauration' },
+  { label: 'Spa & bien-être', to: '/bien-etre' },
+  { label: 'Événements', to: '/evenements' },
+  { label: 'Galerie', to: '/galerie' },
+  { label: 'À propos', to: '/notre-hotel' },
+  { label: 'Contact', to: '/contact' },
 ]
 
-export const experienceSteps = [
-  { number: '01', icon: 'bed', label: 'Dormir', copy: 'Des chambres et suites au confort absolu.' },
-  { number: '02', icon: 'fork', label: 'Savourer', copy: 'Une cuisine qui célèbre les saveurs locales et internationales.' },
-  { number: '03', icon: 'leaf', label: 'Se détendre', copy: 'Un espace dédié au bien-être et à la relaxation.' },
-]
+export const legalLinks = ['Mentions légales', 'Politique de confidentialité', 'Plan du site']
 
-export const roomAmenities = [
-  { icon: 'wifi', label: 'Wi-Fi haut débit' },
-  { icon: 'bell', label: 'Service en chambre 24h/24' },
-  { icon: 'snowflake', label: 'Climatisation' },
-  { icon: 'city', label: 'Vue sur la ville' },
-]
-
-export const diningWellnessTeasers = [
-  {
-    eyebrow: 'Restaurant & Bar',
-    title: 'Une cuisine qui inspire',
-    linkLabel: 'Voir le menu',
-    to: '/restauration',
-    image: '/img/dining-inspire.jpg',
-  },
-  {
-    eyebrow: 'Spa & Bien-être',
-    title: 'Un équilibre parfait',
-    linkLabel: 'Découvrir',
-    to: '/bien-etre',
-    image: '/img/spa-equilibre.jpg',
-  },
-]
-
-export const legalLinks = [
-  { label: 'Mentions légales', to: '/mentions-legales' },
-  { label: 'Politique de confidentialité', to: '/confidentialite' },
-]
+export const galleryCategories = ['Tout', 'Chambres', 'Restaurant', 'Piscine & Spa', 'Événements', 'Extérieurs']
 
 export const galleryImages = [
-  { src: '/img/night-exterior.jpg', alt: 'Façade du Krystal Palace Douala de nuit, vue aérienne' },
-  { src: '/img/exterior-day.jpg', alt: 'Façade du Krystal Palace Douala de jour' },
+  { src: '/img/night-exterior.jpg', alt: 'Façade du Krystal Palace Douala de nuit, vue aérienne', category: 'Extérieurs' },
+  { src: '/img/room-suite-attends.jpg', alt: 'Chambre du Krystal Palace Douala', category: 'Chambres' },
+  { src: '/img/hero-pool.jpg', alt: 'Piscine sur le toit du Krystal Palace', category: 'Piscine & Spa' },
+  { src: '/img/fitness-class.jpg', alt: 'Cours de fitness collectif sur le toit', category: 'Piscine & Spa' },
+  { src: '/img/dining-inspire.jpg', alt: 'Assiette gastronomique du restaurant', category: 'Restaurant' },
+  { src: '/img/event-hall-gold.jpg', alt: 'Salle de réception aménagée pour un mariage', category: 'Événements' },
+  { src: '/img/spa-equilibre.jpg', alt: 'Soin relaxant au Krystal Spa', category: 'Piscine & Spa' },
+  { src: '/img/dining-canapes.jpg', alt: 'Canapés gastronomiques du Krystal Palace', category: 'Restaurant' },
+  { src: '/img/exterior-day.jpg', alt: 'Façade du Krystal Palace Douala de jour', category: 'Extérieurs' },
   { src: '/img/hero-background.jpg', alt: 'Hall d’accueil du Krystal Palace Douala' },
-  { src: '/img/hero-pool.jpg', alt: 'Piscine sur le toit du Krystal Palace' },
-  { src: '/img/pool-loungers.jpg', alt: 'Transats au bord de la piscine' },
+  { src: '/img/pool-loungers.jpg', alt: 'Transats au bord de la piscine', category: 'Piscine & Spa' },
+  { src: '/img/room-02.jpg', alt: 'Chambre Premium Plus', category: 'Chambres' },
+  { src: '/img/room-03.jpg', alt: 'Chambre Deluxe', category: 'Chambres' },
+  { src: '/img/room-05.jpg', alt: 'Executive Suite avec salle de bain vitrée', category: 'Chambres' },
   { src: '/img/lobby-1.jpg', alt: 'Lobby du Krystal Palace Douala' },
   { src: '/img/lobby-2.jpg', alt: 'Réception fleurie du hall' },
-  { src: '/img/entrance-night.jpg', alt: 'Entrée de nuit du Krystal Palace' },
-  { src: '/img/room-05.jpg', alt: 'Executive Suite avec salle de bain vitrée' },
-  { src: '/img/terrace.jpg', alt: 'Terrasse au coucher du soleil' },
+  { src: '/img/entrance-night.jpg', alt: 'Entrée de nuit du Krystal Palace', category: 'Extérieurs' },
+  { src: '/img/terrace.jpg', alt: 'Terrasse au coucher du soleil', category: 'Extérieurs' },
   { src: '/img/lounge-sunset.jpg', alt: 'Salon panoramique au coucher du soleil sur le Wouri' },
-  { src: '/img/event-wedding-table.jpg', alt: 'Table de mariage dressée au Krystal Palace' },
-  { src: '/img/event-hall-gold.jpg', alt: 'Salle de réception aménagée pour un mariage' },
-  { src: '/img/event-hall-pink.jpg', alt: 'Salle de réception thème rose et blanc' },
-  { src: '/img/dining-canapes.jpg', alt: 'Canapés gastronomiques du Krystal Palace' },
-  { src: '/img/spa.jpg', alt: 'Salon du Krystal Spa' },
-  { src: '/img/fitness-class.jpg', alt: 'Cours de fitness collectif sur le toit' },
+  { src: '/img/event-wedding-table.jpg', alt: 'Table de mariage dressée au Krystal Palace', category: 'Événements' },
+  { src: '/img/event-hall-pink.jpg', alt: 'Salle de réception thème rose et blanc', category: 'Événements' },
+  { src: '/img/spa.jpg', alt: 'Salon du Krystal Spa', category: 'Piscine & Spa' },
   { src: '/img/kids.jpg', alt: 'Espace des enfants' },
   { src: '/img/african-decor.jpg', alt: 'Décor aux touches africaines' },
 ]

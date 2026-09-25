@@ -212,3 +212,58 @@ export function IconTwitterX({ className = 'h-4 w-4' }) {
     </svg>
   )
 }
+
+export function IconDumbbell({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11" />
+    </svg>
+  )
+}
+
+export function IconPool({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M8 4v11M16 4v11M8 7.5h8M8 11.5h8" />
+      <path d="M3 18.5c1.5 0 1.5 1 3 1s1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1" />
+    </svg>
+  )
+}
+
+export function IconCar({ className = 'h-5 w-5' }) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M4.5 16.5v-4l2-5.5h11l2 5.5v4h-15Z" />
+      <path d="M4.5 12.5h15M7.5 16.5v2M16.5 16.5v2" />
+      <circle cx="8" cy="14.5" r=".6" fill="currentColor" stroke="none" />
+      <circle cx="16" cy="14.5" r=".6" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+export function IconMapPin({ className = 'h-4 w-4' }) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0 1 13 0c0 5.3-6.5 11-6.5 11Z" />
+      <circle cx="12" cy="10" r="2.3" />
+    </svg>
+  )
+}
+
+export function IconMail({ className = 'h-4 w-4' }) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="3" y="5.5" width="18" height="13" rx="1.5" />
+      <path d="m3.5 7 8.5 6.5L20.5 7" />
+    </svg>
+  )
+}
+
+export function IconClock({ className = 'h-4 w-4' }) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </svg>
+  )
+}

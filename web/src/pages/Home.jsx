@@ -1,23 +1,20 @@
 import Hero from '../components/Hero.jsx'
-import SectionPreviewGrid from '../components/SectionPreviewGrid.jsx'
-import Welcome from '../components/Welcome.jsx'
-import ExperienceBand from '../components/ExperienceBand.jsx'
-import RoomsSplit from '../components/RoomsSplit.jsx'
+import AmenitiesStrip from '../components/AmenitiesStrip.jsx'
+import FeatureSplit from '../components/FeatureSplit.jsx'
 import GoogleTestimonials from '../components/GoogleTestimonials.jsx'
-import Experiences from '../components/Experiences.jsx'
 import GalleryPreview from '../components/GalleryPreview.jsx'
 import CtaBanner from '../components/CtaBanner.jsx'
+import { homeFeatures } from '../data/content.js'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <SectionPreviewGrid />
-      <Welcome />
-      <ExperienceBand />
-      <RoomsSplit />
+      <AmenitiesStrip />
+      {homeFeatures.map((feature) => (
+        <FeatureSplit key={feature.id} {...feature} />
+      ))}
       <GoogleTestimonials />
-      <Experiences />
       <GalleryPreview />
       <CtaBanner />
     </>

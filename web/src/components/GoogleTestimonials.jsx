@@ -44,7 +44,7 @@ export default function GoogleTestimonials() {
     <section className="bg-ivory-100 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <SectionHeading
-          eyebrow="Témoignages"
+          eyebrow="Ils ont séjourné chez nous"
           title="Ce que disent nos clients"
           description={`${hotel.ratings.google.score}/5 sur Google (${hotel.ratings.google.count.toLocaleString('fr-FR')} avis) · ${hotel.ratings.tripadvisor.score}/5 sur Tripadvisor (${hotel.ratings.tripadvisor.count} avis)`}
           align="center"
