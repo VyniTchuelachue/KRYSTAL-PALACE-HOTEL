@@ -7,8 +7,8 @@ export default function Hero() {
     <div className="relative">
       <section className="relative flex min-h-[88vh] flex-col overflow-hidden bg-ink-950 pt-24 sm:pt-28">
         <img
-          src="/img/hero-background.jpg"
-          alt="Lobby du Krystal Palace Douala"
+          src="/img/hero-facade.jpg"
+          alt="Façade du Krystal Palace Douala au crépuscule"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-ink-950/10 to-transparent" />
@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="relative z-10 flex flex-1 flex-col justify-center px-4 pb-28 pt-10 sm:px-6 lg:px-10">
           <div className="mx-auto w-full max-w-7xl">
             <p className="animate-fade-up text-xs uppercase tracking-[0.4em] text-gold-300 sm:text-sm">
-              Hôtel de prestige à Douala
+              Hôtel 5 étoiles
             </p>
             <h1
               className="animate-fade-up mt-5 max-w-2xl font-display text-4xl leading-[1.1] text-ivory-50 sm:text-5xl lg:text-6xl"
