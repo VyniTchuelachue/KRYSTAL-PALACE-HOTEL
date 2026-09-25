@@ -11,7 +11,7 @@ export default function Rooms() {
           description="Des chambres Twin aux suites signature Mandela et Meugang, chaque espace a été pensé pour offrir confort, élégance et vue sur la ville ou le fleuve Wouri."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
           {featuredRooms.map((room) => (
             <article key={room.name} className="group">
               <div className="aspect-[4/3] overflow-hidden bg-ink-900">

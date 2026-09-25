@@ -3,23 +3,23 @@ import SectionHeading from './ui/SectionHeading.jsx'
 const spaces = [
   {
     name: 'Krystal Spa',
-    image: '/img/spa.jpg',
+    image: '/img/nav-spa.jpg',
     copy: 'Un cocon de bien-être pensé pour la détente, entre soins et moments de calme.',
   },
   {
     name: 'Piscine sur le toit',
-    image: '/img/pool-loungers.jpg',
+    image: '/img/nav-pool.jpg',
     copy: 'Une terrasse suspendue au-dessus de Douala, idéale pour un bain ou un cocktail au coucher du soleil.',
   },
   {
     name: 'Sport & Fitness',
-    image: '/img/fitness-class.jpg',
+    image: '/img/nav-fitness.jpg',
     copy: 'Cours collectifs et espace sportif sur le toit, pour garder le rythme même en déplacement.',
   },
   {
-    name: 'Vue sur le Wouri',
-    image: '/img/lounge-sunset.jpg',
-    copy: 'Nos salons panoramiques offrent l’un des plus beaux points de vue sur le fleuve Wouri.',
+    name: 'Jacuzzi & Détente',
+    image: '/img/nav-jacuzzi.jpg',
+    copy: 'Un espace jacuzzi pour se relaxer à deux dans une ambiance apaisante.',
   },
 ]
 

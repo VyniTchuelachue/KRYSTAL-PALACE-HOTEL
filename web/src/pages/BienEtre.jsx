@@ -4,7 +4,7 @@ import Wellness from '../components/Wellness.jsx'
 export default function BienEtre() {
   return (
     <>
-      <PageHeader eyebrow="Détente" title="Bien-être" image="/img/spa.jpg" />
+      <PageHeader eyebrow="Détente" title="Bien-être" image="/img/nav-spa.jpg" />
       <Wellness />
     </>
   )

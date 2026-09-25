@@ -4,18 +4,18 @@ import SectionHeading from './ui/SectionHeading.jsx'
 const events = [
   {
     name: 'Mariages',
-    image: '/img/event-wedding-table.jpg',
+    image: '/img/nav-wedding.jpg',
     copy: 'Dites oui au bord de notre piscine ou dans nos salons, pour une cérémonie mémorable.',
   },
   {
-    name: 'Séminaires & Réceptions',
-    image: '/img/event-dinner.jpg',
+    name: 'Séminaires',
+    image: '/img/nav-seminar.jpg',
     copy: 'Des espaces de réunion et de conférence modulables pour vos événements d’entreprise.',
   },
   {
-    name: 'Espace Enfants',
-    image: '/img/kids.jpg',
-    copy: 'Un coin ludique et coloré pensé pour occuper les plus jeunes en toute sécurité.',
+    name: 'Réceptions',
+    image: '/img/nav-reception.jpg',
+    copy: 'Soirées, dîners de gala et réceptions privées autour de la piscine ou dans nos salons.',
   },
 ]
 
