@@ -7,7 +7,7 @@ export default function Dining() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
         <div>
           <img
-            src="/img/dining-canapes.jpg"
+            src="/img/dining-inspire.jpg"
             alt="Créations gastronomiques du Krystal Palace Douala"
             className="aspect-[4/5] w-full object-cover"
           />

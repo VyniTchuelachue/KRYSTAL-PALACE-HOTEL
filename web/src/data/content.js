@@ -248,7 +248,6 @@ export const galleryImages = [
   { src: '/img/dining-inspire.jpg', alt: 'Assiette gastronomique du restaurant', category: 'Restaurant' },
   { src: '/img/event-hall-gold.jpg', alt: 'Salle de réception aménagée pour un mariage', category: 'Événements' },
   { src: '/img/spa-equilibre.jpg', alt: 'Soin relaxant au Krystal Spa', category: 'Piscine & Spa' },
-  { src: '/img/dining-canapes.jpg', alt: 'Canapés gastronomiques du Krystal Palace', category: 'Restaurant' },
   { src: '/img/exterior-day.jpg', alt: 'Façade du Krystal Palace Douala de jour', category: 'Extérieurs' },
   { src: '/img/hero-background.jpg', alt: 'Hall d’accueil du Krystal Palace Douala' },
   { src: '/img/pool-loungers.jpg', alt: 'Transats au bord de la piscine', category: 'Piscine & Spa' },
