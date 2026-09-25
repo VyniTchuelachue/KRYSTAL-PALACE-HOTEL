@@ -19,6 +19,14 @@ function ImagePanel({ images }) {
           }`}
         />
       ))}
+      {images[index].caption && (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink-950/75 to-transparent" />
+          <p className="pointer-events-none absolute bottom-10 left-5 font-display text-xl text-ivory-50 sm:bottom-9 sm:left-6 sm:text-2xl">
+            {images[index].caption}
+          </p>
+        </>
+      )}
       {many && (
         <>
           <button
